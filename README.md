@@ -4,12 +4,12 @@ A personal portfolio website for Limane Mohammed, a cybersecurity student at HIS
 
 - GitHub: https://github.com/mohquor
 - LinkedIn: https://www.linkedin.com/in/limane-mohammed-9545a043a
-- Expected live URL: https://mohquor.github.io/limane-mohammed-portfolioo/
+- Expected live URL: https://mohquor.github.io/limane-mohammed-portfolio/
 
 ## Project structure
 
 ```
-limane-mohammed-portfolioo/
+limane-mohammed-portfolio/
 ├── index.html          Page content and structure
 ├── style.css           Design system and styling
 ├── script.js           Mobile menu, scroll effects, hero animation
@@ -22,7 +22,7 @@ All paths are relative (for example `style.css`, `assets/favicon.svg`), so the s
 
 ## Deploy to GitHub Pages (beginner guide)
 
-1. **Create a repository.** Sign in to GitHub, click **New repository**, and name it exactly `limane-mohammed-portfolioo`. Keep it **Public**.
+1. **Create a repository.** Sign in to GitHub, click **New repository**, and name it exactly `limane-mohammed-portfolio`. Keep it **Public**.
 2. **Upload the files.** On the new repository page, click **uploading an existing file**. Drag in `index.html`, `style.css`, `script.js`, `README.md`, and the `assets` folder (with `favicon.svg` inside). The files must sit in the repository root, not inside an extra folder. Click **Commit changes**.
 3. **Open Settings.** In your repository, click the **Settings** tab.
 4. **Open Pages.** In the left sidebar, click **Pages**.
