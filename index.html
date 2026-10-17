@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Limane Mohammed | Cybersecurity Student Portfolio</title>
+  <meta name="description" content="Portfolio of Limane Mohammed, a cybersecurity student at HIST in Algeria learning Linux, networking, web security, and penetration testing fundamentals.">
+  <meta name="author" content="Limane Mohammed">
+  <meta name="theme-color" content="#070b10">
+  <meta property="og:title" content="Limane Mohammed | Cybersecurity Student Portfolio">
+  <meta property="og:description" content="Cybersecurity student learning Linux, networking, and web security through hands-on practice in authorized labs.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <!-- Adds a "js" class early so scroll animations only apply when JavaScript runs -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Icon sprite: every icon on the page is defined once here and reused with <use> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+      <symbol id="i-terminal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7.5 9.5 3 2.5-3 2.5M13 15h4"/></g></symbol>
+      <symbol id="i-network" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M11 7 6 16M13 7l5 9M7.2 18h9.6"/></g></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 2.9 7.9 7 9.5 4.1-1.6 7-5.2 7-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></g></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 5.7 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-5.7-3.9-9S9.400 5.700 12 3z"/></g></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.500 6.500a4 4 0 0 0 4.800 4.800l-9 9a2.100 2.100 0 0 1-3-3l9-9z" transform="translate(-0.5 -0.5)"/><path d="m15 5 2 2"/></g></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4.500 4L8 16M16 8l4.500 4L16 16M13.500 5l-3 14"/></g></symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-1.800 4L16 12H5"/></g></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.600"/><path d="M5 20c.8-3.600 3.700-5.500 7-5.500s6.200 1.900 7 5.500"/></g></symbol>
+      <symbol id="i-school" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2.500 9.500 9.500-5 9.500 5-9.500 5z"/><path d="M6.500 12v4.500c0 1 2.500 2.500 5.500 2.500s5.500-1.500 5.500-2.500V12M21.500 9.500V15"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.500-5.800 6.500-11a6.500 6.500 0 0 0-13 0c0 5.200 6.500 11 6.500 11z"/><circle cx="12" cy="10" r="2.300"/></g></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.500"/><circle cx="12" cy="12" r="4.500"/><circle cx="12" cy="12" r=".8"/></g></symbol>
+      <symbol id="i-cert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12.500" rx="2"/><path d="M7 8.500h10M7 12h5"/><path d="m15 16.500 1.200 4 1.800-1.200 1.800 1.200 1.200-4" transform="translate(-4.500 0)"/></g></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.500A1.500 1.500 0 0 1 5.500 4H20v14H5.500A1.500 1.500 0 0 0 4 19.500z"/><path d="M4 19.500A1.500 1.500 0 0 0 5.500 21H20v-3"/></g></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.500 7 8.500 6 8.500-6"/></g></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================== HEADER / NAVIGATION =========================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Limane Mohammed, back to top">
+        <span class="logo__mark">LM</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__bars" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#journey">Learning Journey</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#tryhackme">TryHackMe</a></li>
+        <li><a class="nav__link" href="#certifications">Certifications</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================== HERO =========================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero__network" id="network-canvas" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title">Hi, I'm <span class="hero__name">Limane Mohammed.</span></h1>
+          <p class="hero__role">Cybersecurity Student | Aspiring Security Professional</p>
+          <a class="badge" href="#tryhackme" aria-label="CTF Player on TryHackMe, jump to my TryHackMe section">
+            <svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>CTF Player
+            <span class="badge__sep" aria-hidden="true"></span>TryHackMe
+          </a>
+          <p class="hero__intro">I'm passionate about cybersecurity, Linux, networking, and ethical hacking. I continuously develop my technical knowledge through hands-on practice, security labs, and personal projects.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#skills">Explore My Skills</a>
+            <a class="btn btn--ghost" href="#projects">View My Projects</a>
+            <a class="btn btn--ghost" href="https://github.com/mohquor" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Decorative terminal. It only displays text; it does not run commands. -->
+        <div class="terminal" aria-hidden="true">
+          <div class="terminal__bar">
+            <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
+            <span class="terminal__title">lm@portfolio: ~</span>
+          </div>
+          <div class="terminal__body">
+            <p class="terminal__line" style="--d:0"><span class="prompt">$</span> whoami</p>
+            <p class="terminal__out" style="--d:1">limane-mohammed</p>
+            <p class="terminal__line" style="--d:2"><span class="prompt">$</span> interests</p>
+            <p class="terminal__out" style="--d:3">Cybersecurity | Linux | Networking</p>
+            <p class="terminal__line" style="--d:4"><span class="prompt">$</span> objective</p>
+            <p class="terminal__out" style="--d:5">Learn. Practice. Secure.</p>
+            <p class="terminal__line" style="--d:6"><span class="prompt">$</span> <span class="cursor"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== ABOUT =========================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="about-title">About Me</h2>
+        </header>
+
+        <div class="about reveal">
+          <div class="about__text">
+            <p>My name is Limane Mohammed, and I am a student at HIST in Algeria with a strong interest in cybersecurity and information technology.</p>
+            <p>I am developing my technical skills through Linux environments, networking exercises, web security studies, and Capture The Flag challenges.</p>
+            <p>I enjoy understanding how systems work, exploring security concepts, and learning how to identify and prevent vulnerabilities in authorized training environments.</p>
+            <p>My current focus is strengthening my foundations in Linux, networking, Python, web security, and penetration testing.</p>
+            <p>My long-term goal is to pursue a career in cybersecurity and contribute to making digital systems safer.</p>
+          </div>
+
+          <aside class="profile-card" aria-label="Profile information">
+            <h3 class="profile-card__title">Profile</h3>
+            <dl class="profile-card__list">
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>Name</dt>
+                <dd>Limane Mohammed</dd>
+              </div>
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg>Education</dt>
+                <dd>Student at HIST</dd>
+              </div>
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Country</dt>
+                <dd>Algeria</dd>
+              </div>
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Field</dt>
+                <dd>Cybersecurity</dd>
+              </div>
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg>Current Focus</dt>
+                <dd>Linux, Networking, and Web Security</dd>
+              </div>
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Career Goal</dt>
+                <dd>Cybersecurity Professional</dd>
+              </div>
+              <div class="profile-card__row">
+                <dt><svg class="icon" aria-hidden="true"><use href="#i-cert"/></svg>Certificates</dt>
+                <dd>Not yet</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== SKILLS =========================== -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="skills-title">Cybersecurity Skills</h2>
+          <p class="section__lead">What I'm building, grouped by area. Labels show where I honestly stand today. None of these are claims of mastery.</p>
+        </header>
+
+        <!-- Legend explaining the labels used on each skill -->
+        <ul class="legend" aria-label="Label meanings">
+          <li><span class="tag tag--foundations">Foundations</span> core concepts I'm building on</li>
+          <li><span class="tag tag--learning">Learning</span> actively studying</li>
+          <li><span class="tag tag--practicing">Practicing</span> using it in labs and exercises</li>
+          <li><span class="tag tag--exploring">Exploring</span> tool I've started to try</li>
+        </ul>
+
+        <!--
+          HOW TO EDIT SKILLS:
+          - Add a skill: copy one <li class="skill">...</li> line and change the name and label.
+          - Remove a skill: delete its <li> line.
+          - Labels: tag--foundations, tag--learning, tag--practicing, tag--exploring
+        -->
+        <div class="skills-grid">
+
+          <article class="card skill-card reveal">
+            <svg class="icon icon--lg skill-card__icon" aria-hidden="true"><use href="#i-terminal"/></svg>
+            <h3 class="card__title">Operating Systems</h3>
+            <p class="card__text">Working comfortably in Linux and Windows environments.</p>
+            <ul class="skill-list">
+              <li class="skill"><span>Linux Fundamentals</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Kali Linux</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Windows</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>Windows Subsystem for Linux (WSL)</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Linux Command Line</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Virtual Machines</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Basic System Administration</span><span class="tag tag--learning">Learning</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <svg class="icon icon--lg skill-card__icon" aria-hidden="true"><use href="#i-network"/></svg>
+            <h3 class="card__title">Networking</h3>
+            <p class="card__text">Understanding how data moves and how to inspect it.</p>
+            <ul class="skill-list">
+              <li class="skill"><span>TCP/IP Fundamentals</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>IP Addressing</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>Ports and Network Services</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>DNS Fundamentals</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>HTTP and HTTPS</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>Network Troubleshooting</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>VPN Fundamentals</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>Network Traffic Analysis</span><span class="tag tag--learning">Learning</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <svg class="icon icon--lg skill-card__icon" aria-hidden="true"><use href="#i-globe"/></svg>
+            <h3 class="card__title">Web Security</h3>
+            <p class="card__text">Studying common web vulnerabilities and how to prevent them.</p>
+            <ul class="skill-list">
+              <li class="skill"><span>OWASP Top 10 Concepts</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>SQL Injection Fundamentals</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Cross-Site Scripting (XSS) Fundamentals</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Authentication and Authorization</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Web Directory Enumeration</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>File Upload Security</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Vulnerability Identification in Training Labs</span><span class="tag tag--practicing">Practicing</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <svg class="icon icon--lg skill-card__icon" aria-hidden="true"><use href="#i-wrench"/></svg>
+            <h3 class="card__title">Cybersecurity Tools</h3>
+            <p class="card__text">Tools I've explored in authorized labs. Each one is still a work in progress.</p>
+            <ul class="skill-list">
+              <li class="skill"><span>Nmap</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Wireshark</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Burp Suite</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>OWASP ZAP</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>WPScan</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Gobuster</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Feroxbuster</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Netcat</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Metasploit Framework</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>SQLmap</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>SearchSploit</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Shodan</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>CyberChef</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>BloodHound</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>Snort</span><span class="tag tag--exploring">Exploring</span></li>
+              <li class="skill"><span>TruffleHog</span><span class="tag tag--exploring">Exploring</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <svg class="icon icon--lg skill-card__icon" aria-hidden="true"><use href="#i-code"/></svg>
+            <h3 class="card__title">Programming and Development</h3>
+            <p class="card__text">Scripting and web basics that support my security learning.</p>
+            <ul class="skill-list">
+              <li class="skill"><span>Python Fundamentals</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Bash Scripting Fundamentals</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>HTML5</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>CSS3</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>JavaScript Fundamentals</span><span class="tag tag--foundations">Foundations</span></li>
+              <li class="skill"><span>Git</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>GitHub</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Python HTTP Server Fundamentals</span><span class="tag tag--foundations">Foundations</span></li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <svg class="icon icon--lg skill-card__icon" aria-hidden="true"><use href="#i-flag"/></svg>
+            <h3 class="card__title">Cybersecurity Practice</h3>
+            <p class="card__text">Hands-on habits: labs, challenges, and writing things down.</p>
+            <ul class="skill-list">
+              <li class="skill"><span>TryHackMe</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Capture The Flag (CTF) Challenges</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Basic Reconnaissance</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Service Enumeration</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Vulnerability Research</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Linux Privilege Escalation Fundamentals</span><span class="tag tag--learning">Learning</span></li>
+              <li class="skill"><span>Security Testing in Authorized Environments</span><span class="tag tag--practicing">Practicing</span></li>
+              <li class="skill"><span>Technical Documentation</span><span class="tag tag--learning">Learning</span></li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== LEARNING JOURNEY =========================== -->
+    <section class="section" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="journey-title">Learning Journey</h2>
+          <p class="section__lead">The areas I'm working through, in the order I'm approaching them. These are learning milestones, not completed certifications.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">1</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Linux and Command-Line Fundamentals</h3>
+              <p class="card__text">Getting comfortable in the terminal, the file system, permissions, and everyday commands.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">2</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Networking Fundamentals</h3>
+              <p class="card__text">Learning how TCP/IP, DNS, HTTP, and common network services fit together.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">3</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Python and Bash Basics</h3>
+              <p class="card__text">Writing small scripts to automate tasks and understand how tools work.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">4</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Web Development Fundamentals</h3>
+              <p class="card__text">Learning HTML, CSS, and JavaScript to see how websites are built and where they can break.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">5</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Web Security</h3>
+              <p class="card__text">Studying the OWASP Top 10 and how common web vulnerabilities are found and fixed.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">6</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Cybersecurity Tools and Reconnaissance</h3>
+              <p class="card__text">Trying out scanning, enumeration, and analysis tools in authorized environments.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">7</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">TryHackMe and CTF Practice</h3>
+              <p class="card__text">Applying what I learn through guided rooms and Capture The Flag challenges.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">8</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Penetration Testing Fundamentals</h3>
+              <p class="card__text">Understanding the methodology behind authorized security assessments.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__marker" aria-hidden="true">9</span>
+            <div class="card timeline__card">
+              <h3 class="card__title">Advanced Cybersecurity Topics</h3>
+              <p class="card__text">A future goal: going deeper once the foundations are solid.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================== PROJECTS =========================== -->
+    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="projects-title">Projects</h2>
+          <p class="section__lead">Learning projects and ongoing practice. I'll add repository links and write-ups as they become available.</p>
+        </header>
+
+        <!--
+          HOW TO ADD A REAL REPOSITORY LINK:
+          In the project's footer, replace the <span class="project__note">...</span> with:
+          <a class="btn btn--small btn--ghost" href="https://github.com/mohquor/REPO-NAME" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View Repository
+          </a>
+          Only add it when the repository really exists.
+        -->
+        <div class="projects-grid">
+
+          <article class="card project reveal">
+            <header class="project__head">
+              <h3 class="card__title">Personal Cybersecurity Portfolio</h3>
+              <span class="status status--progress">In Progress</span>
+            </header>
+            <p class="card__text">A personal website showcasing my cybersecurity interests, technical skills, learning journey, and projects.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+            </ul>
+            <footer class="project__foot"><span class="project__note">Documentation Coming Soon</span></footer>
+          </article>
+
+          <article class="card project reveal">
+            <header class="project__head">
+              <h3 class="card__title">Linux Learning Environment</h3>
+              <span class="status status--learning">Learning Project</span>
+            </header>
+            <p class="card__text">A personal learning environment for practicing Linux commands, system administration, scripting, and cybersecurity fundamentals.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>Linux</li><li>Kali Linux</li><li>Bash</li><li>WSL</li>
+            </ul>
+            <footer class="project__foot"><span class="project__note">Documentation Coming Soon</span></footer>
+          </article>
+
+          <article class="card project reveal">
+            <header class="project__head">
+              <h3 class="card__title">Web Security Labs</h3>
+              <span class="status status--learning">Learning Project</span>
+            </header>
+            <p class="card__text">Hands-on learning focused on understanding common web vulnerabilities and practicing security testing in authorized environments.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>Burp Suite</li><li>OWASP ZAP</li><li>WPScan</li><li>SQLmap</li>
+            </ul>
+            <footer class="project__foot"><span class="project__note">Documentation Coming Soon</span></footer>
+          </article>
+
+          <article class="card project reveal">
+            <header class="project__head">
+              <h3 class="card__title">Network Analysis Practice</h3>
+              <span class="status status--learning">Learning Project</span>
+            </header>
+            <p class="card__text">Learning to understand network protocols, inspect traffic, and troubleshoot connectivity using networking tools.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>Wireshark</li><li>Nmap</li><li>TCP/IP</li>
+            </ul>
+            <footer class="project__foot"><span class="project__note">Documentation Coming Soon</span></footer>
+          </article>
+
+          <article class="card project reveal">
+            <header class="project__head">
+              <h3 class="card__title">TryHackMe and CTF Learning</h3>
+              <span class="status status--ongoing">Ongoing Learning</span>
+            </header>
+            <p class="card__text">Documenting lessons learned from cybersecurity training rooms, practical exercises, and authorized Capture The Flag challenges.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>Linux</li><li>Networking</li><li>Web Security</li><li>Cybersecurity Tools</li>
+            </ul>
+            <footer class="project__foot">
+              <a class="btn btn--small btn--ghost" href="https://tryhackme.com/p/mohquor" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>TryHackMe Profile
+              </a>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== TRYHACKME =========================== -->
+    <section class="section" id="tryhackme" aria-labelledby="thm-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="thm-title">TryHackMe</h2>
+        </header>
+
+        <article class="card thm reveal">
+          <div class="thm__icon" aria-hidden="true">
+            <svg class="icon icon--xl"><use href="#i-flag"/></svg>
+          </div>
+          <div class="thm__body">
+            <p class="thm__name">Mohammed Limane</p>
+            <p class="thm__handle">@mohquor</p>
+            <p class="thm__role">Cybersecurity Learner | CTF Player | TryHackMe</p>
+            <p class="thm__text">I practice cybersecurity through hands-on labs, penetration testing challenges, and Capture The Flag (CTF) exercises on TryHackMe.</p>
+            <!-- Only link to the public profile. Add rank, points, or badges here later if you want, using your real numbers. -->
+            <a class="btn btn--primary" href="https://tryhackme.com/p/mohquor" target="_blank" rel="noopener noreferrer">
+              View My TryHackMe Profile
+              <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================== CERTIFICATIONS =========================== -->
+    <section class="section" id="certifications" aria-labelledby="cert-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="cert-title">Certifications &amp; Training</h2>
+        </header>
+
+        <div class="cert reveal">
+          <div class="cert__text">
+            <p class="cert__status">Certificates: Not yet</p>
+            <p>I'm currently focused on building strong cybersecurity foundations and gaining practical experience through self-study, training platforms, and authorized security labs. Certifications are a future goal as I continue developing my knowledge.</p>
+            <p>Learning platform: <a class="text-link" href="https://tryhackme.com/p/mohquor" target="_blank" rel="noopener noreferrer"><strong>TryHackMe</strong></a></p>
+          </div>
+
+          <!--
+            HOW TO ADD A REAL CERTIFICATE LATER:
+            Replace the empty-state card below with a card like this, using only real details:
+            <article class="card cert-item"><h3 class="card__title">Certificate name</h3><p class="card__text">Issuer, date</p></article>
+          -->
+          <div class="cert__empty" role="group" aria-label="Certificates earned">
+            <svg class="icon icon--xl" aria-hidden="true"><use href="#i-cert"/></svg>
+            <p class="cert__empty-title">Not yet</p>
+            <p class="cert__empty-text">Working toward future certifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== TOOLS & TECHNOLOGIES =========================== -->
+    <section class="section section--alt" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="tools-title">Tools &amp; Technologies</h2>
+          <p class="section__lead">The tools and technologies I'm learning with, grouped by purpose. Listing a tool means I'm studying it, not that I've mastered it.</p>
+        </header>
+
+        <!-- To add a tool, copy an <li> and change the name. To add a group, copy a whole <article>. -->
+        <div class="tools-grid">
+          <article class="tool-group reveal">
+            <h3 class="tool-group__title"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg>Operating Systems</h3>
+            <ul class="chips">
+              <li>Linux</li><li>Kali Linux</li><li>Windows</li><li>WSL</li><li>Virtual Machines</li>
+            </ul>
+          </article>
+          <article class="tool-group reveal">
+            <h3 class="tool-group__title"><svg class="icon" aria-hidden="true"><use href="#i-network"/></svg>Network Analysis</h3>
+            <ul class="chips">
+              <li>Wireshark</li><li>Nmap</li><li>Netcat</li><li>Snort</li>
+            </ul>
+          </article>
+          <article class="tool-group reveal">
+            <h3 class="tool-group__title"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Web Security</h3>
+            <ul class="chips">
+              <li>Burp Suite</li><li>OWASP ZAP</li><li>WPScan</li><li>SQLmap</li><li>CyberChef</li>
+            </ul>
+          </article>
+          <article class="tool-group reveal">
+            <h3 class="tool-group__title"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>Reconnaissance</h3>
+            <ul class="chips">
+              <li>Gobuster</li><li>Feroxbuster</li><li>Shodan</li><li>SearchSploit</li><li>Metasploit Framework</li><li>BloodHound</li><li>TruffleHog</li>
+            </ul>
+          </article>
+          <article class="tool-group reveal">
+            <h3 class="tool-group__title"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Programming</h3>
+            <ul class="chips">
+              <li>Python</li><li>Bash</li><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Git</li><li>GitHub</li>
+            </ul>
+          </article>
+          <article class="tool-group reveal">
+            <h3 class="tool-group__title"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Learning Platforms</h3>
+            <ul class="chips">
+              <li>TryHackMe</li><li>CTF Challenges</li>
+            </ul>
+          </article>
+        </div>
+        <p class="fineprint">Tool names are listed to describe what I'm learning. This is not an endorsement, and it does not imply affiliation with or certification from any tool's creators.</p>
+      </div>
+    </section>
+
+    <!-- =========================== GITHUB & LINKEDIN =========================== -->
+    <section class="section" id="profiles" aria-labelledby="profiles-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="profiles-title">GitHub, LinkedIn &amp; TryHackMe</h2>
+        </header>
+
+        <div class="profiles-grid">
+          <article class="card profile reveal">
+            <svg class="icon icon--xl" aria-hidden="true"><use href="#i-github"/></svg>
+            <h3 class="card__title">GitHub</h3>
+            <p class="card__text">Explore my repositories, personal projects, and technical learning journey.</p>
+            <a class="btn btn--primary" href="https://github.com/mohquor" target="_blank" rel="noopener noreferrer">Explore My GitHub</a>
+          </article>
+
+          <article class="card profile reveal">
+            <svg class="icon icon--xl" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            <h3 class="card__title">LinkedIn</h3>
+            <p class="card__text">Connect with me and follow my professional development in cybersecurity and information technology.</p>
+            <a class="btn btn--primary" href="https://www.linkedin.com/in/limane-mohammed-9545a043a" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          </article>
+
+          <article class="card profile reveal">
+            <svg class="icon icon--xl" aria-hidden="true"><use href="#i-flag"/></svg>
+            <h3 class="card__title">TryHackMe</h3>
+            <p class="card__text">See my public profile and follow my hands-on cybersecurity practice and CTF learning.</p>
+            <a class="btn btn--primary" href="https://tryhackme.com/p/mohquor" target="_blank" rel="noopener noreferrer">View My TryHackMe Profile</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== CONTACT =========================== -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <h2 class="section__title" id="contact-title">Let's Connect</h2>
+        <p class="section__lead">I'm always interested in learning, sharing knowledge, and connecting with people who are passionate about cybersecurity and technology.</p>
+        <div class="contact__actions">
+          <a class="btn btn--primary" href="https://github.com/mohquor" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub Profile
+          </a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/limane-mohammed-9545a043a" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn Profile
+          </a>
+          <a class="btn btn--ghost" href="https://tryhackme.com/p/mohquor" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>TryHackMe Profile
+          </a>
+          <!--
+            OPTIONAL EMAIL: add your real address here when you want one, for example:
+            <a class="btn btn--ghost" href="mailto:you@example.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email Me</a>
+          -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================== FOOTER =========================== -->
+  <footer class="site-footer">
+    <div class="container footer">
+      <div class="footer__brand">
+        <p class="footer__name">Limane Mohammed</p>
+        <p class="footer__tagline">Learn. Practice. Secure.</p>
+        <ul class="footer__social">
+          <li><a href="https://github.com/mohquor" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/limane-mohammed-9545a043a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="https://tryhackme.com/p/mohquor" target="_blank" rel="noopener noreferrer" aria-label="TryHackMe (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#journey">Learning Journey</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#tryhackme">TryHackMe</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__legal">
+        <p class="footer__ethics">All security research and testing should be performed only on systems you own or have explicit authorization to test.</p>
+        <p class="footer__copy">&copy; <span id="year">2026</span> Limane Mohammed. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
